@@ -3,14 +3,14 @@ abstract class Vehicle{
   int ? _speed;
   move();
   Vehicle(this.name);
-  set setSpeed(int value){
-    _speed = value;
+  setSpeed(int speed){
+    _speed = speed;
   }
 }
 
 class Car extends Vehicle{
-  String carName;
-  Car(this.carName) : super(carName);
+  Car(String name) : super(name);
+
   @override
   move() {
    print('The car $name is moving at $_speed KM/H.');
@@ -19,6 +19,6 @@ class Car extends Vehicle{
 
 main(){
   Car audi = Car('Audi');
-  audi.setSpeed = 150;
+  audi.setSpeed(150);
   audi.move();
 }
