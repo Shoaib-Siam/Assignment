@@ -1,9 +1,9 @@
 abstract class Vehicle{
   String name;
-  double ? _speed;
+  int ? _speed;
   move();
   Vehicle(this.name);
-  set setSpeed(double value){
+  set setSpeed(int value){
     _speed = value;
   }
 }
@@ -19,6 +19,6 @@ class Car extends Vehicle{
 
 main(){
   Car audi = Car('Audi');
-  audi.setSpeed = 150.7;
+  audi.setSpeed = 150;
   audi.move();
 }
